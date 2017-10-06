@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/siman-man/proc_source.svg?branch=master)](https://travis-ci.org/siman-man/proc_source)
+
 # proc_source
 
 get the sourcecode for a Proc object
