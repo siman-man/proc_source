@@ -27,6 +27,7 @@ class Proc
     _pos, event, ident = *token
     return true if event == :on_const && ident == "Proc"
     return true if event == :on_ident && ident == "lambda"
+    return true if event == :on_ident && ident == "proc"
     return true if event == :on_kw && ident == "do"
     return true if event == :on_lbrace
     return true if event == :on_tlambda

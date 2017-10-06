@@ -118,6 +118,30 @@ RSpec.describe ProcSource do
     end
   end
 
+  context "proc pattern" do
+    it "test case 001" do
+      proc1 = proc { "hi" }
+      expect =<<-EXPECT.chomp
+              proc { "hi" }
+      EXPECT
+
+      expect(proc1.proc_source).to eq(expect)
+    end
+
+    it "test case 002" do
+      proc1 = proc do
+        "hi"
+      end
+      expect =<<-EXPECT.chomp
+              proc do
+        "hi"
+      end
+      EXPECT
+
+      expect(proc1.proc_source).to eq(expect)
+    end
+  end
+
   context "corner case" do
     xit "test case 001" do
       lambda1 = eval('lambda { "hi" }')
